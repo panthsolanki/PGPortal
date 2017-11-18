@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Paynow | Govind Tours N Travels</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <script type="text/javascript" >
+        function show(aval){
+            if (aval == "Cheque"){
+                Cheque.style.display='inherit';
+                Draft.style.display='none';
+                RTGS.style.display='none';
+            } 
+            else if(aval == "Draft"){
+                Cheque.style.display='none';
+                Draft.style.display='inherit';
+                RTGS.style.display='none';
+            }
+            else if(aval == "RTGS"){
+                Cheque.style.display='none';
+                Draft.style.display='none';
+                RTGS.style.display='inherit';
+            }
+            else{
+                Cheque.style.display='none';
+                Draft.style.display='none';
+                RTGS.style.display='none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="index.html"><!--img src="assets/img/gtt_logo.png"-->Govind Tours N Travels </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="air.html">AIR</a></li>
+					<li><a href="checkin.html">Web CheckIn</a></li>
+					<!-- li><a href="package.html">TRAVEL PACKAGE</a></li -->
+                    <li><a href="insurance.html">TRAVEL INSURANCE</a></li>
+					<li><a href="passport.html">PASSPORT</a></li>
+					<li><a href="visa.html">VISA</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+					<li><a href="paynow.html">PAY NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row main-low-margin">
+                <div class="col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1">
+                    <h1>Pay Now</h1>
+					<h5></h5>
+                </div>
+				<div class="col-md-3 col-sm-3">
+					<p style="margin-top:35px; font-size:large; font-weight:bold;">
+							<i class="fa fa-phone fa-1x">&nbsp;&nbsp;</i> +91 98795 17399<br />
+							<i class="fa fa-phone fa-1x">&nbsp;&nbsp;</i> +91 94264 17399<br />
+					</p>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row main-low-margin">
+            <div class="col-md-6 col-sm-6">
+                <h3  class="text-center">Enter Payment Details</h3>
+                <p  class="text-center">* Fields are mandatory</p>
+                <hr>
+                <form method="post" action="payment.php">
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Payee / Company * </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="Payee" type="text" class="form-control" required="required" placeholder="Enter your Name or your Company Name">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Amount * </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="Amount" type="number" class="form-control" required="required" placeholder="Enter Amount in Digits">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Payment Date * </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="PayDate" type="date" class="form-control" required="required" title="Date of Payment">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Payment Mode *</label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <select id="PayMode" name="PayMode" class="form-control" required="required" onChange="java_script_:show(this.options[this.selectedIndex].value)">
+                                <option value="Cash" selected="selected" >Cash</option>
+                                <option value="Cheque">Cheque</option>
+                                <option value="Draft">Draft</option>
+                                <option value="RTGS">RTGS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="Cheque" style="display:none">
+                        <div class="row form-group name">
+                            <div class="col-md-4 col-sm-4">
+                                <label>Cheque No. * </label>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <input name="ChequNo" type="text" class="form-control" placeholder="Cheque Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Draft" style="display:none">
+                        <div class="row form-group name">
+                            <div class="col-md-4 col-sm-4">
+                                <label>Draft No. * </label>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <input name="DraftNo" type="text" class="form-control" placeholder="Draft Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="RTGS" style="display:none">
+                        <div class="row form-group name">
+                            <div class="col-md-4 col-sm-4">
+                                <label>UTR No. * </label>
+                            </div>
+                            <div class="col-md-8 col-sm-8">
+                                <input name="UTRNo" type="text" class="form-control" placeholder="UTR Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Bank * </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="Bank" type="text" class="form-control" required="required" placeholder="Name of Bank from which you Pay">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Branch * </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="Branch" type="text" class="form-control" required="required" placeholder="Name of Branch">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Our Bank Account *</label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <select name="BA" class="form-control" required="required">
+                                <option value="ICICI" selected="selected" >ICICI BANK -  006705500423 </option>
+                                <option value="BOB">BANK OF BARODA - 46850200000004 </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Bank Transaction ID </label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="BTID" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row form-group name">
+                        <div class="col-md-4 col-sm-4">
+                            <label>Remarks</label>
+                        </div>
+                        <div class="col-md-8 col-sm-8">
+                            <input name="Remark" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group centre" align="centre">
+                                <button value="Send" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+			<div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-5 col-sm-5">
+                <h3 class="text-center">Our Bank Accounts Details</h3>
+                <p></p>
+                <hr>
+                <div class="col-md-12 col-sm-12">				
+        			<h3 class="text-center">ICICI BANK </h3>
+        			<p style="font-size:large;">
+        				Name of Bank Account :<b>&nbsp;&nbsp; Govind Tours n Travels</b><br>
+        				Branch :<b>&nbsp;&nbsp; Jodhpur Gam, Ahmedabad </b><br>
+        				C. A No. :<b>&nbsp;&nbsp; 006705500423 </b><br>
+        				RTGS / NEFT / IFSC Code :<b>&nbsp;&nbsp; ICIC000 0067 </b><br>
+        				MICR Code :<b>&nbsp;&nbsp; 380229004 </b><br>
+        			</p>
+        		</div>  
+    			<div class="col-md-12 col-sm-12">				
+    				<h3 class="text-center">BANK OF BARODA </h3>
+    				<p style="font-size:large;">
+    					Name of Bank Account :<b>&nbsp;&nbsp; Govind Tours n Travels</b><br>
+    					Branch :<b>&nbsp;&nbsp; Jivrajpark, Ahmedabad </b><br>
+    					C. A No. :<b>&nbsp;&nbsp; 468502000 00004 </b><br>
+    					RTGS / NEFT / IFSC Code :<b>&nbsp;&nbsp; BARB0JIVRAJ </b><br>
+    					MICR Code :<b>&nbsp;&nbsp; 380012104 </b><br>
+    				</p>
+    			</div>       
+            </div>
+        </div>
+	</div>
+    <div class="container">
+        <div class="row main-low-margin">
+<div class="col-md-12 col-sm-12">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Horizontal Leatherboard banner -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1994089057642476"
+     data-ad-slot="5415285940"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div></div>
+    <div class="space-bottom"></div>
+	<div class="space-bottom"></div>
+	
+	<div id="footer">
+        <div class="navbar" >
+			<div class="container">
+				<div class="col-md-4">
+					© 2016 Govind Tours N Travels
+				</div>
+				<div class="col-md-4">
+                <center>
+					<a href="https://plus.google.com/101965823254496462798" target="_blank"><i class="fa fa-google-plus-square fa-3x color-google-plus"></i></a>
+                    <a href="https://www.instagram.com/govindtoursntravels/" target="_blank"><i class="fa fa-instagram fa-3x color-instagram"></i></a>
+                    <a href="https://www.facebook.com/Govind-Tours-N-Travels-1595601060730779/" target="_blank"><i class="fa fa-facebook-square fa-3x color-facebook"></i></a>
+                </center>
+				</div>
+				<div class="col-md-4" align="right">
+					Design by <a href="https://about.me/panth.solanki" style="text-decoration:none; color:white;" target="_blank">Panth Solanki</a>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!--END FOOTER SECTION -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY LIBRARY -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--  Google Analytics  -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-50244273-3', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+</body>
+</html>
