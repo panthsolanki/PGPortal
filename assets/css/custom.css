@@ -1,0 +1,43 @@
+.img-small{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 1.66%;
+}
+
+h1{
+    padding-top: 10px;
+    line-height: 35px;
+}
+
+.big_img{
+    width: 700px;
+    height: 550px;
+}
+
+.list{
+    padding: 9px;
+    list-style-type: none;
+    margin: -5px;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.h3-head{
+    margin-top: -15px;
+    font-size: 20px;
+}
+
+.h3-des{
+    margin-top: -15px;
+    font-size: 20px;
+    margin: 1px;
+}

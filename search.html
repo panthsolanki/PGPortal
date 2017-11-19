@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+	<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Property Form</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/tableform.css" rel="stylesheet" />
+    <style>
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .map-responsive iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+        </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a class="navbar-brand" href="index.html">Title</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Search</a></li>
+                    <li><a href="#">Property</a></li>
+                    <li><a href="#">SignOut</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row main-low-margin">
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                    <h1>Search Form </h1>
+                    <h5>Fill following to post Porperty</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row main-low-margin">
+            <div class="col-md-12 col-sm-12">				
+				<div class="container mar_top ">
+					<form name="propost" method="post" action="passportform.php">
+                        <div class="row form-group name">
+                            <div class="col-md-1 col-sm-1"></div>
+                            <div class="col-md-6 col-sm-6">
+                                <input name="title" type="text" class="form-control" required="required" placeholder="Landmark" title="Landmark">
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <input name="radius" type="number" class="form-control" required="required" placeholder="Radius (in K.M.)" title="Radius (in K.M.)">
+                            </div>
+                            <div class="col-md-2 col-sm-2">
+                                <button value="Send" type="submit" class="btn btn-primary">
+                                    <div><i class="fa fa-search"></i></div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <div class="col col-md-12 col-sm-12">
+                            <div class="map-responsive">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.9523366592343!2d72.50723031454618!3d23.039177984944605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b4f44c998cb%3A0x8afafa525cf69145!2sShilp+Aaron!5e1!3m2!1sen!2sin!4v1478922037756" width="900" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>            
+        </div>
+	</div>
+    <div class="space-bottom"></div>
+	<div id="footer">
+        <div class="navbar" >
+			<div class="container">
+				<div class="col-md-4">
+					Group No - 4
+				</div>
+				<div class="col-md-4">
+                
+				</div>
+				<div class="col-md-4" align="right">
+					Design for MIS </a>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!--END FOOTER SECTION -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- FOR FORM -->
+    <script src="assets/js/form.js"></script>
+    <!-- CORE JQUERY LIBRARY -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
