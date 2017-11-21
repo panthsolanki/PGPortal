@@ -44,11 +44,20 @@ hr {
 
 .bgimg-1 {
     position: relative;
-    opacity: 1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;       
     background-image: url("bg.jpg");
     height: 50%;
-  }
+}
   
+.bgimg-2 {
+    position: relative;
+    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-image: url("pattern.jpeg");
+    height: 50%;
+}
+ 
